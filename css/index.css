@@ -1,3 +1,16 @@
+/* --- RESET GLOBAL PARA EVITAR DESBORDAMIENTOS --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden; /* Esto corta de raíz cualquier scroll horizontal */
+}
+
 html {
   scroll-behavior: smooth;
 }

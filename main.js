@@ -248,4 +248,32 @@ document.addEventListener("DOMContentLoaded", () => {
         .scrollIntoView({ behavior: "smooth" });
     });
   }
+
+  /* =========================================================================
+     SECCION Agendar:Paso 3
+     ========================================================================= */
+
+  // --- NAVEGACIÓN DEL PASO 3 AL PASO 4 (FINAL) ---
+  const btnPaso3 = document.getElementById("btn-paso-3");
+  const paso4 = document.getElementById("paso-4");
+
+  if (btnPaso3) {
+    btnPaso3.addEventListener("click", () => {
+      // 1. Aquí irá el código para procesar/enviar los datos a tu servidor
+      console.log("Enviando formulario...");
+
+      // 2. Ocultamos el paso 3
+      document.getElementById("paso-3").classList.remove("active");
+
+      // 3. Mostramos el paso 4 (Mensaje de Éxito)
+      if (paso4) {
+        paso4.classList.add("active");
+      }
+
+      // 4. Subir el scroll
+      document
+        .querySelector(".wizard-section")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
 });

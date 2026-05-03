@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* Reutilizando la clase .logo-container del header */
@@ -99,20 +99,22 @@
 
   .legal-links {
     gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 /* Pequeño ajuste para pantallas muy pequeñas (celulares verticales) */
 @media (max-width: 480px) {
   .footer-top .logo-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
   }
 
   .footer-top .logo-divider {
-    width: 50px;
-    height: 3px;
+    width: 3px;
+    height: 50px;
     margin: 0.5rem 0;
   }
 }

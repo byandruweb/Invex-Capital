@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./css/educacion.css" />
     <link rel="stylesheet" href="./css/agendar_step1.css" />
     <link rel="stylesheet" href="./css/agendar_step2.css" />
+    <link rel="stylesheet" href="./css/agendar_step3.css" />
+    <link rel="stylesheet" href="./css/agendar_step4.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <!--IMPORTANTE PONER ESTO PARA QUE LEA EL ARCHIVO JAVASCRIPT-->
     <script defer src="./main.js"></script>
@@ -47,6 +49,8 @@
 
       <!-- Botones de Acción -->
       <div class="action-container">
+        <!-- Botón flotante en móvil -->
+        <a href="#"><button class="btn-primary">Soporte</button></a>
         <!-- Botón de Modo Día/Noche -->
         <button
           id="theme-toggle"
@@ -300,12 +304,91 @@
 
       <!-- PASO 3: Galería de Pagos (Oculto por defecto) -->
       <div id="paso-3" class="wizard-step">
-        <!-- Aquí irá la pasarela de pagos -->
+        <div class="wizard-form-layout">
+          <!-- COLUMNA IZQUIERDA: Textos y Alerta -->
+          <div class="form-info-col">
+            <p class="subtitle">- Envía tu consulta</p>
+            <h2 class="titulo wizard-title">Finaliza tu solicitud</h2>
+            <p class="wizard-text">
+              Para completar el proceso, realiza el pago de tu consulta
+              escaneando el siguiente código QR o utilizando los datos bancarios
+              indicados a continuación.
+            </p>
+
+            <!-- Caja de Información Importante -->
+            <div class="info-alert-box">
+              <div class="info-icon">
+                <span class="titulo">i</span>
+              </div>
+              <p class="info-text">
+                <strong>Importante:</strong> Tu solicitud será enviada
+                inmediatamente a nuestro equipo, sin embargo, se te pedirá el
+                comprobante de pago para la asesoría previo a la consulta.
+              </p>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: Contenedor de Pagos y Botón -->
+          <div class="form-inputs-col payment-col">
+            <!-- Placeholder de la Galería de Pagos -->
+            <div class="payment-gallery-placeholder">
+              <p>CONTENEDOR PARA LA GALERIA DE PAGOS</p>
+            </div>
+
+            <!-- Botón de Envío de Solicitud -->
+            <div class="form-actions right-align mt-2">
+              <button type="button" id="btn-paso-3" class="btn-primary">
+                Enviar Solicitud
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- PASO 4: Confirmación (Oculto por defecto) -->
       <div id="paso-4" class="wizard-step">
-        <!-- Mensaje de éxito final -->
+        <div class="success-container">
+          <!-- Ícono de Éxito -->
+          <div class="success-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="120"
+              height="120"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 12.5l3 3 5-6"></path>
+            </svg>
+          </div>
+
+          <!-- Mensaje de Confirmación -->
+          <h2 class="titulo success-title">
+            Formulario y pago enviado con <span class="highlight">éxito</span>
+          </h2>
+          <p class="success-text">
+            Un miembro de nuestro equipo se pondrá en contacto<br />
+            contigo muy pronto tras verificar el pago.
+          </p>
+
+          <!-- Opcional: Botón para volver al inicio -->
+          <div class="mt-2">
+            <a
+              href="index.html"
+              class="btn-primary"
+              style="
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 2rem;
+              "
+              >Volver al inicio</a
+            >
+          </div>
+        </div>
       </div>
     </section>
 

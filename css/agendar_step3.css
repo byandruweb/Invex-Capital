@@ -1,0 +1,83 @@
+/* --- PASO 3: CAJA DE INFORMACIÓN (ALERTA) --- */
+.info-alert-box {
+  background-color: var(--bg-card); /* Azul grisáceo de tu paleta nocturna */
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .info-alert-box {
+  background-color: #eedcba; /* Tono arena/dorado claro para el tema de día */
+}
+
+.info-icon {
+  background-color: #6ba4d8; /* Azul claro del ícono */
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Evita que el círculo se aplaste si el texto es muy largo */
+}
+
+.info-icon .titulo {
+  font-size: 2.2rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* --- PASO 3: CONTENEDOR DE PAGOS (PLACEHOLDER) --- */
+.payment-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Para que el contenido se distribuya bien */
+}
+
+.payment-gallery-placeholder {
+  flex-grow: 1;
+  min-height: 400px;
+  border: 3px solid #ffffff; /* Borde blanco grueso en modo oscuro */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+[data-theme="light"] .payment-gallery-placeholder {
+  border-color: #0d1b2a; /* Borde oscuro en modo claro */
+}
+
+.payment-gallery-placeholder p {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* Ajuste responsive para la caja de alerta en móviles */
+@media (max-width: 796px) {
+  .info-alert-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .payment-gallery-placeholder {
+    min-height: 300px;
+  }
+}
