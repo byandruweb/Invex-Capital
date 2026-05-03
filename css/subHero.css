@@ -1,0 +1,82 @@
+/* --- SECCIÓN SUB-HERO EQUIPO --- */
+.sub-hero-equipo {
+  position: relative;
+  width: 100%;
+  min-height: 80vh; /* Ocupa el 60% del alto de la ventana visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+
+  /* El truco del overlay: Un gradiente semitransparente sobre la imagen */
+  /* El valor 0.65 dicta el nivel de oscuridad (0 es invisible, 1 es negro sólido) */
+  background: url("../assets/sub_hero.png");
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+}
+
+.sub-hero-content {
+  max-width: 1000px;
+  z-index: 2;
+  /* Forzamos el texto a blanco para que resalte sobre el overlay sin importar el tema (día/noche) */
+  color: #ffffff;
+}
+
+.sub-hero-content .subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.sub-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+}
+
+.sub-hero-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 850px;
+  opacity: 0.9; /* Un poco de transparencia para diferenciarlo del título */
+}
+
+/* --- RESPONSIVE BASICO (< 992px) --- */
+@media (max-width: 992px) {
+  .sub-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .sub-hero-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- RESPONSIVE MÓVILES (< 796px) --- */
+@media (max-width: 796px) {
+  .sub-hero-equipo {
+    min-height: 50vh; /* Reducimos un poco la altura en móviles */
+    padding: 4rem 1.5rem;
+  }
+
+  .sub-hero-title {
+    font-size: 2.2rem;
+    /* Quitamos el salto de línea forzado en móviles para que fluya natural */
+    word-break: break-word;
+  }
+
+  .sub-hero-content br {
+    display: none; /* Oculta los <br> en móvil para evitar saltos raros */
+  }
+
+  .sub-hero-text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/servicios.css" />
+    <link rel="stylesheet" href="./css/subHero.css" />
+    <link rel="stylesheet" href="./css/equipo_cards.css" />
+    <link rel="stylesheet" href="./css/certificaciones.css" />
+    <link rel="stylesheet" href="./css/educacion.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <!--IMPORTANTE PONER ESTO PARA QUE LEA EL ARCHIVO JAVASCRIPT-->
+    <script defer src="./main.js"></script>
+    <title>Invex Capital</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <!-- Sección del Logo -->
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          <h1>INVEX<br />CAPITAL</h1>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-subtitle">
+          Servicios<br />financieros<br />contables y<br />legal societario
+        </div>
+      </div>
+
+      <!-- Enlaces de Navegación -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Nuestro Equipo</a>
+        <a href="#educacion">Educación</a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="action-container">
+        <!-- Botón flotante en móvil -->
+        <button class="btn-primary">Agendar consulta</button>
+
+        <!-- Botón de Modo Día/Noche -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Cambiar tema"
+        >
+          <svg
+            id="moon-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg
+            id="sun-icon"
+            class="hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Botón Hamburguesa (Nuevo) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="hero">
+      <!-- Columna de Texto -->
+      <div class="hero-content">
+        <h1 class="titulo hero-title">
+          Conecta con<br />
+          nuestros<br />
+          <span class="highlight">especialistas</span><br />
+          hoy
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-text">
+          Consultas online con profesionales especializados. Elige tu tema,
+          agenda con nuestro equipo y obtén soluciones claras.
+        </p>
+
+        <!-- Mantuve el texto "Explorar soluciones", pero le devolví la clase btn-primary 
+             para que se vea dorado y sólido como en tu diseño original -->
+        <a href="#servicios" class="btn-primary">Explorar soluciones</a>
+      </div>
+
+      <!-- Columna de Imágenes -->
+      <div class="hero-images">
+        <img
+          src="./assets/hero_main.png"
+          alt="Especialista financiera"
+          class="img-main"
+        />
+        <img
+          src="./assets/hero_sub.png"
+          alt="Mercado de valores"
+          class="img-overlay"
+        />
+      </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="services-section">
+      <div class="services-header">
+        <p class="subtitle">- Nuestros servicios</p>
+        <h2 class="titulo services-title">
+          Soluciones financieras e integrales para
+          <span class="highlight">su éxito</span>
+        </h2>
+        <p class="services-description">
+          Ofrecemos una gama completa de servicios financieros, contables y
+          legales diseñados para proteger y hacer crecer su patrimonio.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Tarjeta 1: Finanzas e Inversiones -->
+        <div class="service-card" tabindex="0">
+          <div class="card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 7 13.5 15.5 8.5 10.5 2 17"></path>
+              <path d="M16 7h6v6"></path>
+            </svg>
+          </div>
+          <div class="card-header">
+            <h3 class="titulo">Finanzas e Inversiones</h3>
+            <span class="expand-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-content">
+            <p class="card-summary">
+              Gestión integral de portafolios, análisis de mercados,
+              planificación patrimonial y estrategias de inversión
+              personalizadas para maximizar sus rendimientos.
+            </p>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Inversión en las bolsas de
+                  valores
+                </div>
+                <div class="service-detail">
+                  Asesoramiento experto para la compra y venta de activos en
+                  mercados internacionales.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Portafolio de inversiones
+                </div>
+                <div class="service-detail">
+                  Diseño y diversificación de carteras adaptadas a su perfil de
+                  riesgo.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Finanzas personales
+                </div>
+                <div class="service-detail">
+                  Planificación a largo plazo para asegurar su estabilidad
+                  financiera.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Plan de negocios
+                </div>
+                <div class="service-detail">
+                  Planificación a largo plazo para asegurar su estabilidad
+                  financiera.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Franquicias
+                </div>
+                <div class="service-detail">
+                  Planificación a largo plazo para asegurar su estabilidad
+                  financiera.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Contabilidad -->
+        <div class="service-card" tabindex="0">
+          <div class="card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+              <line x1="8" x2="16" y1="6" y2="6"></line>
+              <line x1="16" x2="16" y1="14" y2="18"></line>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M8 18h.01"></path>
+            </svg>
+          </div>
+          <div class="card-header">
+            <h3 class="titulo">Contabilidad</h3>
+            <span class="expand-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-content">
+            <p class="card-summary">
+              Servicios contables completos incluyendo auditoría financiera,
+              optimización fiscal, reportes regulatorios y consultoría
+              tributaria especializada.
+            </p>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Declaraciones Fiscales
+                </div>
+                <div class="service-detail">
+                  Manejo preciso de sus libros contables y estados financieros.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Balances y auditorias
+                </div>
+                <div class="service-detail">
+                  Estrategias de eficiencia fiscal y cumplimiento de
+                  obligaciones tributarias.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Consultas tributarias
+                </div>
+                <div class="service-detail">
+                  Revisión independiente para garantizar la transparencia de su
+                  empresa.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Contabilidad
+                </div>
+                <div class="service-detail">
+                  Revisión independiente para garantizar la transparencia de su
+                  empresa.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Impuestos
+                </div>
+                <div class="service-detail">
+                  Revisión independiente para garantizar la transparencia de su
+                  empresa.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Legal Societario -->
+        <div class="service-card" tabindex="0">
+          <div class="card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+              <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+              <path d="M7 21h10"></path>
+              <path d="M12 3v18"></path>
+              <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path>
+            </svg>
+          </div>
+          <div class="card-header">
+            <h3 class="titulo">Legal Societario</h3>
+            <span class="expand-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-content">
+            <p class="card-summary">
+              Asesoría legal en constitución de empresas, fusiones y
+              adquisiciones, gobierno corporativo y compliance regulatorio.
+            </p>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Constitución de empresas
+                </div>
+                <div class="service-detail">
+                  Acompañamiento legal desde la idea hasta el registro
+                  mercantil.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Contratos y documentos
+                </div>
+                <div class="service-detail">
+                  Redacción y revisión de acuerdos comerciales para blindar su
+                  negocio.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Cumplimiento normativo
+                </div>
+                <div class="service-detail">
+                  Aseguramos que sus operaciones se ajusten a la legislación
+                  vigente.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Trámites SUPERCOM
+                </div>
+                <div class="service-detail">
+                  Aseguramos que sus operaciones se ajusten a la legislación
+                  vigente.
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="item-title">
+                  <span class="bullet">□</span> Trámite Visas USA
+                </div>
+                <div class="service-detail">
+                  Aseguramos que sus operaciones se ajusten a la legislación
+                  vigente.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN SUB-HERO EQUIPO -->
+    <section id="equipo" class="sub-hero-equipo">
+      <div class="sub-hero-content">
+        <p class="subtitle">- Nuestro Equipo</p>
+        <h2 class="titulo sub-hero-title">
+          Profesionales confiables en finanzas<br />
+          contabilidad y derecho corporativo
+        </h2>
+        <p class="sub-hero-text">
+          En INVEX CAPITAL® contamos con expertos certificados en asesoría
+          financiera, inversiones, contabilidad y derecho corporativo. Cada
+          profesional aporta años de experiencia y compromiso con tu éxito.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TARJETAS DE EQUIPO -->
+    <section class="team-section">
+      <div class="team-grid">
+        <!-- Tarjeta 1: Fabian Murillo -->
+        <div class="team-card">
+          <!-- La parte superior gris (lista para foto de fondo en el futuro) -->
+          <div class="team-card-top">
+            <div class="team-avatar">
+              <!-- Iniciales actuales -->
+              <span class="initials titulo">FM</span>
+              <!-- Descomenta y usa esta etiqueta cuando tengas la foto -->
+              <!-- <img src="ruta/a/foto-fabian.jpg" alt="Foto de Fabian" class="avatar-img"> -->
+            </div>
+          </div>
+          <!-- Contenido de la tarjeta -->
+          <div class="team-card-bottom">
+            <h3 class="titulo team-name">Mgtr. Fabian Murillo Q.</h3>
+            <p class="team-role">
+              CEO - <br />
+              Especialista en Finanzas <br />
+              e Inversiones
+            </p>
+            <div class="team-divider"></div>
+            <p class="team-bio">
+              Más de 20 años de experiencia en inversiones y finanzas
+              corporativas. MPA en Universidad Técnica de Guayaquil (UTEG), BBA
+              Major in Finance en Florida Global Univesity (FGU). Director de
+              inversiones en empresas privadas y asesoria pública.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Maria Alvarado -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-avatar">
+              <span class="initials titulo">MA</span>
+              <!-- <img src="ruta/a/foto-maria.jpg" alt="Foto de Maria" class="avatar-img"> -->
+            </div>
+          </div>
+          <div class="team-card-bottom">
+            <h3 class="titulo team-name">Lic. Adm. Maria Alvarado O.</h3>
+            <p class="team-role">
+              COO - <br />
+              Especialista en <br />
+              Contabilidad y Auditoría
+            </p>
+            <div class="team-divider"></div>
+            <p class="team-bio">
+              Contadora Pública Certificada con más de 18 años de experiencia en
+              auditoría financiera y consultoría tributaria. Certificado por las
+              Big Four.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Fernando Murillo -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-avatar">
+              <span class="initials titulo">FM</span>
+              <!-- <img src="ruta/a/foto-fernando.jpg" alt="Foto de Fernando" class="avatar-img"> -->
+            </div>
+          </div>
+          <div class="team-card-bottom">
+            <h3 class="titulo team-name">Abg. Fernando Murillo Q.</h3>
+            <p class="team-role">
+              COO - <br />
+              Especialista en Derecho <br />
+              Societario
+            </p>
+            <div class="team-divider"></div>
+            <p class="team-bio">
+              Abogado con especialización en derecho migratorio, societario,
+              fusiones y adquisiciones. Diplomado en Derecho por la Universidad
+              Técnica Particular de Loja (UTPL) 10 años asesorando empresas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONFIANZA Y CERTIFICACIONES -->
+    <section id="certificaciones" class="trust-section">
+      <!-- Cabecera de la sección -->
+      <div class="trust-header">
+        <div class="header-left">
+          <p class="subtitle">- Certificaciones y capacitaciones</p>
+          <h2 class="titulo trust-title">
+            Confianza respaldada <br />
+            por <span class="highlight">regulación</span> y <br />
+            expertise
+          </h2>
+        </div>
+        <div class="header-right">
+          <p class="trust-description">
+            Nuestro equipo mantiene certificaciones vigentes y cumple con los
+            más altos estándares regulatorios de la industria financiera y legal
+            en Ecuador.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fila 1: Testimonios -->
+      <div class="testimonials-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+          </div>
+          <p class="testimonial-text">
+            INVEX CAPITAL® demostró profundo conocimiento en derecho corporativo
+            y me guió a través de cada paso con claridad. Su asesoría legal
+            protegió nuestros intereses comerciales.
+          </p>
+          <div class="testimonial-author">
+            <!-- Sustituir con la ruta a la foto real -->
+            <img
+              src="ruta/a/foto-carlos.jpg"
+              alt="Carlos Mendoza"
+              class="author-img"
+            />
+            <div class="author-info">
+              <h4>Carlos Mendoza</h4>
+              <span>Gerente General, Empresa de Comercio Exterior</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+          </div>
+          <p class="testimonial-text">
+            INVEX CAPITAL® demostró profundo conocimiento en derecho corporativo
+            y me guió a través de cada paso con claridad. Su asesoría legal
+            protegió nuestros intereses comerciales.
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="ruta/a/foto-patricio1.jpg"
+              alt="Patricio Velasco"
+              class="author-img"
+            />
+            <div class="author-info">
+              <h4>Patricio Velasco</h4>
+              <span>Director Financiero, Empresa de Manufactura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+          </div>
+          <p class="testimonial-text">
+            INVEX CAPITAL® demostró profundo conocimiento en derecho corporativo
+            y me guió a través de cada paso con claridad. Su asesoría legal
+            protegió nuestros intereses comerciales.
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="ruta/a/foto-patricio2.jpg"
+              alt="Patricio Velasco"
+              class="author-img"
+            />
+            <div class="author-info">
+              <h4>Patricio Velasco</h4>
+              <span>Director Financiero, Empresa de Manufactura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 2: Certificaciones (Contenedores tipo ENLACE) -->
+      <div class="certifications-grid">
+        <!-- Certificación 1 -->
+        <a
+          href="#link-certificado-xtb"
+          class="cert-link-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="cert-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4>Certificación</h4>
+            <p>Análisis financiero y trading en XTB Universidad de Málaga</p>
+          </div>
+        </a>
+
+        <!-- Certificación 2 -->
+        <a
+          href="#link-supercias"
+          class="cert-link-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="cert-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+              <path d="M9 22v-4h6v4"></path>
+              <path d="M8 6h.01"></path>
+              <path d="M16 6h.01"></path>
+              <path d="M12 6h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M16 10h.01"></path>
+              <path d="M16 14h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M8 14h.01"></path>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4>Auditados</h4>
+            <p>Por las Superintendencia de Compañías, Valores y Seguros</p>
+          </div>
+        </a>
+
+        <!-- Certificación 3 -->
+        <a
+          href="#link-certificado-utpl"
+          class="cert-link-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="cert-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4>Certificación</h4>
+            <p>Derecho Migratorio Universidad Técnica Particulas de Loja</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EDUCACIÓN Y BLOG -->
+    <section id="educacion" class="edu-section">
+      <div class="edu-header">
+        <p class="subtitle">- Aprende y crece</p>
+        <h2 class="titulo edu-title">Conocimiento que genera valor</h2>
+        <p class="edu-description">
+          Accede a cursos especializados y artículos de nuestro blog para
+          dominar conceptos clave en finanzas, inversiones y derecho
+          corporativo. Herramientas prácticas diseñadas para prepararte antes de
+          tu consulta.
+        </p>
+      </div>
+
+      <div class="edu-grid">
+        <!-- Artículo 1: Finanzas -->
+        <a href="single.html" class="edu-card">
+          <span class="edu-badge">Finanzas</span>
+          <h3 class="titulo card-title">Guía Completa de inversiones 2024</h3>
+          <p class="card-excerpt">
+            Descubre las mejores estrategias de inversión para maximizar tu
+            patrimonio este año.
+          </p>
+          <div class="card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>28 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Artículo 2: Derecho -->
+        <a href="single.html" class="edu-card">
+          <span class="edu-badge">Derecho</span>
+          <h3 class="titulo card-title">
+            Cambios en la Legislación Societaria
+          </h3>
+          <p class="card-excerpt">
+            Análisis de las últimas reformas en derecho corporativo y cómo
+            afectan a tu empresa.
+          </p>
+          <div class="card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>18 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Artículo 3: Contabilidad -->
+        <a href="single.html" class="edu-card">
+          <span class="edu-badge">Contabilidad</span>
+          <h3 class="titulo card-title">Optimización Fiscal para Empresas</h3>
+          <p class="card-excerpt">
+            Estrategias legales para optimizar la carga tributaria de tu
+            negocio.
+          </p>
+          <div class="card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>5 feb 2026</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer-section">
+      <div class="footer-container">
+        <!-- Parte Superior del Footer: Logo e Información de Contacto -->
+        <div class="footer-top">
+          <!-- Sección del Logo (Reutilizando estructura del header) -->
+          <div class="logo-container">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+              <h1>INVEX<br />CAPITAL</h1>
+            </div>
+            <div class="logo-divider"></div>
+            <div class="logo-subtitle">
+              Servicios<br />financieros<br />contables y<br />legal societario
+            </div>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span>info@invexcapitalec.com</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                />
+              </svg>
+              <span>(+593) 99 971 6118</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+              <span>Av. Ordoñes Lasso, Cuenca, EC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte Inferior del Footer: Derechos y Enlaces Legales -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2026 INVEX CAPITAL. Todos los derechos reservados. | Diseñado por
+            Andre Murillo Alvarado
+          </div>
+          <div class="legal-links">
+            <a href="#politica-privacidad">Política de Privacidad</a>
+            <a href="#terminos-servicio">Términos de Servicio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

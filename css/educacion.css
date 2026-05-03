@@ -1,0 +1,158 @@
+/* --- SECCIÓN EDUCACIÓN Y BLOG --- */
+.edu-section {
+  padding: 6rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.edu-header {
+  margin-bottom: 4rem;
+}
+
+.edu-section .subtitle {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .edu-section .subtitle {
+  color: var(--secundario);
+}
+
+.edu-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+}
+
+.edu-description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* --- TARJETAS DE ARTÍCULOS --- */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: left;
+}
+
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card-2); /* El color gris claro de tu paleta */
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  /* Forzamos el color del texto a oscuro porque el fondo siempre es claro en esta tarjeta */
+  color: var(--primario);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+[data-theme="light"] .edu-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.edu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* --- ETIQUETAS (BADGES) --- */
+.edu-badge {
+  align-self: flex-start;
+  background-color: #b6d0e2; /* Azul claro para el tema oscuro */
+  color: var(--primario);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="light"] .edu-badge {
+  background-color: #eedcba; /* Dorado claro para el tema de día */
+  color: #a67c00; /* Texto dorado oscuro */
+}
+
+/* --- CONTENIDO DE LA TARJETA --- */
+.edu-card .card-title {
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+  color: var(--primario); /* Asegura que el título siempre sea azul oscuro */
+}
+
+.edu-card .card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  opacity: 0.8;
+  flex-grow: 1; /* Empuja la fecha hacia abajo si el texto es corto */
+}
+
+/* --- META (FECHA E ICONO) --- */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.card-meta svg {
+  /* Ajuste para que el icono del reloj se vea igual que en tu diseño */
+  stroke-width: 2.5;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .edu-grid {
+    gap: 1.5rem;
+  }
+
+  .edu-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .edu-title {
+    font-size: 2.8rem;
+  }
+
+  .edu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .edu-title {
+    font-size: 2.3rem;
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+}

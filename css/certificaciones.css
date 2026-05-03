@@ -1,0 +1,221 @@
+/* --- SECCIÓN CONFIANZA Y CERTIFICACIONES --- */
+.trust-section {
+  padding: 6rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- CABECERA (GRID 60/40) --- */
+.trust-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.header-left {
+  flex: 1.5; /* Ocupa más espacio */
+}
+
+.header-right {
+  flex: 1; /* Ocupa menos espacio */
+}
+
+.trust-section .subtitle {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .trust-section .subtitle {
+  color: var(--secundario);
+}
+
+.trust-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--text-color);
+}
+
+[data-theme="light"] .trust-title .highlight {
+  color: var(--secundario);
+}
+
+.trust-description {
+  font-size: 1.15rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- TESTIMONIOS (FILA 1) --- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(
+    --bg-card
+  ); /* Usando variable oscura/clara de tu index.css */
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.quote-icon {
+  color: var(--secundario); /* Comillas doradas */
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  opacity: 0.85;
+  flex-grow: 1; /* Empuja el autor hacia abajo si el texto es corto */
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--primario); /* Fondo de respaldo si no hay foto */
+}
+
+.author-info h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.author-info span {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  display: block;
+  line-height: 1.3;
+}
+
+/* --- CERTIFICACIONES (ENLACES - FILA 2) --- */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Estilos clave para que el enlace luzca como una tarjeta */
+.cert-link-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none; /* Quita el subrayado del link */
+  color: var(--text-color); /* Hereda el color del texto */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .cert-link-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Un borde sutil en modo claro */
+}
+
+/* Efecto hover interactivo para el enlace */
+.cert-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .cert-link-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cert-icon {
+  flex-shrink: 0;
+  color: var(--text-color); /* Blanco en dark, Azul en light */
+}
+
+[data-theme="light"] .cert-icon {
+  color: var(--secundario); /* Íconos dorados en modo claro según tu diseño */
+}
+
+.cert-info h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+.cert-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .trust-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .testimonials-grid,
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+
+  /* Centrar la última certificación si quedan impares en 2 columnas */
+  .certifications-grid .cert-link-card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .trust-title {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+
+  .certifications-grid .cert-link-card:last-child {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+}
