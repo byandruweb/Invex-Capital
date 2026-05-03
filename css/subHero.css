@@ -46,6 +46,7 @@
   margin: 0 auto;
   max-width: 850px;
   opacity: 0.9; /* Un poco de transparencia para diferenciarlo del título */
+  margin-bottom: 6rem;
 }
 
 /* --- RESPONSIVE BASICO (< 992px) --- */

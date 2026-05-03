@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/servicios.css" />
+    <link rel="stylesheet" href="./css/subHero.css" />
+    <link rel="stylesheet" href="./css/equipo_cards.css" />
+    <link rel="stylesheet" href="./css/certificaciones.css" />
+    <link rel="stylesheet" href="./css/educacion.css" />
+    <link rel="stylesheet" href="./css/agendar_step1.css" />
+    <link rel="stylesheet" href="./css/agendar_step2.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <!--IMPORTANTE PONER ESTO PARA QUE LEA EL ARCHIVO JAVASCRIPT-->
+    <script defer src="./main.js"></script>
+    <title>Invex Capital</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <!-- Sección del Logo -->
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          <h1>INVEX<br />CAPITAL</h1>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-subtitle">
+          Servicios<br />financieros<br />contables y<br />legal societario
+        </div>
+      </div>
+
+      <!-- Enlaces de Navegación -->
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="#wizard-section">Formulario</a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="action-container">
+        <!-- Botón de Modo Día/Noche -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Cambiar tema"
+        >
+          <svg
+            id="moon-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg
+            id="sun-icon"
+            class="hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Botón Hamburguesa (Nuevo) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DEL FORMULARIO DINÁMICO -->
+    <section id="wizard-section" class="wizard-section">
+      <!-- PASO 1: Hero de Introducción -->
+      <div id="paso-1" class="wizard-step active">
+        <div class="wizard-hero">
+          <!-- Columna de Texto -->
+          <div class="wizard-content">
+            <h1 class="titulo wizard-title">
+              Asesoría<br />
+              financiera y<br />
+              legal que te<br />
+              <span class="highlight">protege</span> y<br />
+              crece
+            </h1>
+            <div class="wizard-divider"></div>
+            <p class="wizard-text">
+              Resuelve tus dudas en finanzas, inversiones, contabilidad y
+              derecho corporativo con profesionales certificados de © Invex
+              Capital.
+            </p>
+            <!-- Este botón activará el JS para ir al Paso 2 -->
+            <button type="button" id="btn-empezar" class="btn-primary">
+              Empezar consulta
+            </button>
+          </div>
+
+          <!-- Columna de Imágenes -->
+          <div class="wizard-images">
+            <img
+              src="./assets/hero_agendar.png"
+              alt="Análisis financiero en laptop"
+              class="img-main"
+            />
+            <img
+              src="./assets/hero_sub.png"
+              alt="Mercado B3"
+              class="img-overlay"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 2: Formulario (Oculto por defecto) -->
+      <div id="paso-2" class="wizard-step">
+        <div class="wizard-form-layout">
+          <!-- COLUMNA IZQUIERDA: Textos y Tarjeta Dinámica -->
+          <div class="form-info-col">
+            <p class="subtitle">- Formulario</p>
+            <h2 class="titulo wizard-title">
+              Cuéntanos qué<br />
+              necesitas y conecta<br />
+              con nuestros<br />
+              <span class="highlight">expertos</span>
+            </h2>
+            <p class="wizard-text" style="margin-bottom: 2rem">
+              Completa el formulario a continuación y nos pondremos en contacto
+              dentro de 24 horas para orientarte en tu consulta financiera,
+              legal o contable.
+            </p>
+
+            <!-- TARJETA DEL PROFESIONAL ASIGNADO (Sin el botón extra) -->
+            <div id="profesional-card" class="assigned-prof-container">
+              <p
+                class="subtitle"
+                style="font-size: 0.85rem; margin-bottom: 1rem"
+              >
+                - Profesional Asignado
+              </p>
+              <div class="assigned-prof-card">
+                <div class="prof-avatar">
+                  <span id="prof-initials" class="titulo">FM</span>
+                </div>
+                <div class="prof-details">
+                  <span id="prof-badge" class="prof-badge"
+                    >Finanzas e inversiones</span
+                  >
+                  <h4 id="prof-name" class="titulo">Mgtr. Fabian Murillo</h4>
+                  <p id="prof-role">
+                    Socio Director - Especialista en Finanzas Corporativas
+                  </p>
+                  <ul id="prof-bullets" class="prof-bullets">
+                    <li>Gestión de portafolios</li>
+                    <li>Análisis de mercados</li>
+                    <li>Planificación patrimonial</li>
+                    <li>Fondos de inversión</li>
+                  </ul>
+                </div>
+                <div class="prof-price">
+                  <span class="price-label">Costo de consulta</span>
+                  <h3 id="prof-cost" class="titulo">$20</h3>
+                  <span class="price-currency">USD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: Formulario -->
+          <div class="form-inputs-col">
+            <form id="consulta-form">
+              <div class="input-group">
+                <label for="nombre">Nombre Completo</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  class="pill-input"
+                  placeholder="NOMBRE DE EJEMPLO"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="pill-input"
+                  placeholder="CORREO_DE@EJEMPLO.COM"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="telefono">Teléfono o WhatsApp</label>
+                <div class="phone-wrapper pill-input">
+                  <select id="country-code" class="country-select">
+                    <option value="+593">🇪🇨 (+593)</option>
+                    <option value="+1">🇺🇸 (+1)</option>
+                    <option value="+52">🇲🇽 (+52)</option>
+                    <option value="+34">🇪🇸 (+34)</option>
+                    <option value="+57">🇨🇴 (+57)</option>
+                    <option value="+51">🇵🇪 (+51)</option>
+                  </select>
+                  <div class="phone-divider"></div>
+                  <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="98 765 4321"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="tema"
+                  >¿Sobre qué tema necesitas asesoramiento?</label
+                >
+                <select id="tema" class="pill-input custom-select" required>
+                  <option value="" disabled selected>
+                    Selecciona una opción...
+                  </option>
+                  <option value="finanzas">
+                    Asesoramiento financiero e inversiones
+                  </option>
+                  <option value="contabilidad">Contabilidad y auditoría</option>
+                  <option value="legal">Derecho societario y legal</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="mensaje">Cuéntanos más sobre tu consulta</label>
+                <textarea
+                  id="mensaje"
+                  rows="4"
+                  class="rounded-textarea"
+                  placeholder="Descripción breve del tema de su consulta..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Único botón Siguiente, deshabilitado por defecto -->
+              <div class="form-actions right-align mt-2">
+                <button
+                  type="button"
+                  id="btn-paso-2"
+                  class="btn-primary"
+                  disabled
+                >
+                  Siguiente
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 3: Galería de Pagos (Oculto por defecto) -->
+      <div id="paso-3" class="wizard-step">
+        <!-- Aquí irá la pasarela de pagos -->
+      </div>
+
+      <!-- PASO 4: Confirmación (Oculto por defecto) -->
+      <div id="paso-4" class="wizard-step">
+        <!-- Mensaje de éxito final -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer-section">
+      <div class="footer-container">
+        <!-- Parte Superior del Footer: Logo e Información de Contacto -->
+        <div class="footer-top">
+          <!-- Sección del Logo (Reutilizando estructura del header) -->
+          <div class="logo-container">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+              <h1>INVEX<br />CAPITAL</h1>
+            </div>
+            <div class="logo-divider"></div>
+            <div class="logo-subtitle">
+              Servicios<br />financieros<br />contables y<br />legal societario
+            </div>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span>info@invexcapitalec.com</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                />
+              </svg>
+              <span>(+593) 99 971 6118</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+              <span>Av. Ordoñes Lasso, Cuenca, EC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte Inferior del Footer: Derechos y Enlaces Legales -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2026 INVEX CAPITAL. Todos los derechos reservados. | Diseñado por
+            Andre Murillo Alvarado
+          </div>
+          <div class="legal-links">
+            <a href="#politica-privacidad">Política de Privacidad</a>
+            <a href="#terminos-servicio">Términos de Servicio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

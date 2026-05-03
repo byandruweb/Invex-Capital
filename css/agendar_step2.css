@@ -1,0 +1,271 @@
+/* --- LAYOUT DEL PASO 2 --- */
+.wizard-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* --- ESTILOS DE FORMULARIO --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Input estilo Píldora (Nombre, Email, Tema) */
+.pill-input {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 30px; /* Bordes totalmente redondeados */
+  padding: 1rem 1.5rem;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+[data-theme="light"] .pill-input {
+  border-color: rgba(13, 27, 42, 0.6); /* Borde más suave en modo claro */
+}
+
+.pill-input:focus {
+  border-color: var(--secundario);
+}
+
+/* Textarea (Bordes ligeramente redondeados) */
+.rounded-textarea {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+}
+
+[data-theme="light"] .rounded-textarea {
+  border-color: rgba(13, 27, 42, 0.6);
+}
+
+.rounded-textarea:focus {
+  border-color: var(--secundario);
+}
+
+/* --- SELECTOR DE PAÍS + TELÉFONO --- */
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0; /* Quitamos padding para que lo manejen los hijos */
+  overflow: hidden;
+}
+
+.country-select {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  padding: 1rem 0.5rem 1rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Oculta la flecha nativa */
+}
+
+.phone-divider {
+  width: 2px;
+  height: 25px;
+  background-color: var(--text-color);
+  opacity: 0.3;
+  margin: 0 0.5rem;
+}
+
+.phone-wrapper input[type="tel"] {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  padding: 1rem 1.5rem 1rem 0.5rem;
+  font-size: 1rem;
+  flex-grow: 1;
+  outline: none;
+}
+
+/* Select de Tema (Flecha personalizada) */
+.custom-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+  background-size: 1.5em;
+  cursor: pointer;
+}
+
+[data-theme="light"] .custom-select {
+  /* Flecha oscura para el tema claro */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d1b2a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* --- TARJETA DEL PROFESIONAL DINÁMICA --- */
+.assigned-prof-container {
+  display: none; /* Oculto por defecto, se muestra con JS */
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.assigned-prof-container.show {
+  display: block;
+}
+
+.assigned-prof-card {
+  background-color: #e2e6ea; /* Gris fijo como en la imagen para contraste */
+  color: #0d1b2a; /* Texto oscuro forzado */
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .assigned-prof-card {
+  background-color: #f8f9fa; /* Gris más claro en tema de día */
+}
+
+.prof-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-color); /* Círculo oscuro */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prof-avatar .titulo {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.prof-details {
+  flex-grow: 1;
+}
+
+.prof-badge {
+  display: inline-block;
+  background-color: #b6d0e2;
+  color: var(--primario);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .prof-badge {
+  background-color: #eedcba;
+  color: #a67c00;
+}
+
+.prof-details h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.2rem;
+}
+.prof-details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.prof-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+.prof-bullets li::before {
+  content: "□ ";
+  color: #a67c00;
+  font-weight: bold;
+}
+
+.prof-price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.price-label,
+.price-currency {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+.prof-price h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #a67c00;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+.right-align {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* --- ESTADO DESHABILITADO PARA EL BOTÓN --- */
+.btn-primary:disabled {
+  background-color: #4a5568; /* Gris azulado oscuro */
+  color: #a0aec0; /* Texto atenuado */
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+  transform: none; /* Evita que haga la animación de clic/hover */
+}
+
+/* Estado deshabilitado para el modo claro */
+[data-theme="light"] .btn-primary:disabled {
+  background-color: #cbd5e0;
+  color: #718096;
+}
+
+.btn-primary:disabled:hover {
+  box-shadow: none;
+  background-color: #4a5568; /* Mantiene el color apagado */
+}
+
+[data-theme="light"] .btn-primary:disabled:hover {
+  background-color: #cbd5e0;
+}
+
+/* --- RESPONSIVE PASO 2 --- */
+@media (max-width: 992px) {
+  .wizard-form-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .assigned-prof-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .prof-price {
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .prof-bullets {
+    text-align: left;
+    display: inline-block;
+  }
+}
