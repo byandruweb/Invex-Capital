@@ -16,9 +16,11 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: hidden; -- Removido para permitir que la foto sobresalga hacia arriba */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   background-color: #ffffff; /* Fondo blanco fijo para contrastar */
+  margin-top: 20px;
+  margin-bottom: 50px;
   transition: transform 0.3s ease;
 }
 
@@ -31,10 +33,10 @@
 /* --- PARTE SUPERIOR DE LA TARJETA --- */
 .team-card-top {
   /* Aquí podrás cambiar este background-color por un background-image en el futuro */
-  background-color: var(--bg-card-2);
   background-size: cover;
   background-position: center;
   height: 220px;
+  border-radius: 8px 8px 0 0; /* Mantiene las esquinas superiores redondeadas */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,15 +44,14 @@
 
 /* --- AVATAR (CÍRCULO) --- */
 .team-avatar {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: var(--primario);
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Asegura que la foto futura no se salga del círculo */
   position: relative;
+  border-radius: 8px 8px 0 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,16 +63,25 @@
 
 /* Estilo preparado para cuando agregues las fotos de perfil */
 .avatar-img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 130%; /* Altura superior al 100% para crear el efecto de sobresalir */
   object-fit: cover;
   position: absolute;
-  top: 0;
-  left: 0;
+  object-position: bottom; /* Alinea visualmente el interior de la foto hacia abajo */
+  position: center;
+  bottom: 0; /* Ancla físicamente la imagen a la base del contenedor */
+  left: 20;
+  filter: grayscale(100%); /* Imagen en blanco y negro por defecto */
+  transition: filter 0.4s ease;
+}
+
+.team-card:hover .avatar-img {
+  filter: grayscale(0%); /* Restaura el color al hacer hover sobre la tarjeta */
 }
 
 /* --- CONTENIDO DE LA TARJETA --- */
 .team-card-bottom {
+  border-radius: 0 0 8px 8px; /* Mantiene las esquinas inferiores redondeadas */
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <!--IMPORTANTE PONER ESTO PARA QUE LEA EL ARCHIVO JAVASCRIPT-->
+    <script defer src="./main.js"></script>
+    <title>Invex Capital</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <!-- Sección del Logo -->
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          <h1>INVEX<br />CAPITAL</h1>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-subtitle">
+          Servicios<br />financieros<br />contables y<br />legales
+        </div>
+      </div>
+
+      <!-- Enlaces de Navegación -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Nuestro Equipo</a>
+        <a href="#educacion">Educación</a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="action-container">
+        <!-- Botón flotante en móvil -->
+        <a href="agendar.html"
+          ><button class="btn-primary">Agendar consulta</button></a
+        >
+
+        <!-- Botón de Modo Día/Noche -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Cambiar tema"
+        >
+          <svg
+            id="moon-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg
+            id="sun-icon"
+            class="hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Botón Hamburguesa (Nuevo) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- CABECERA DEL BLOG -->
+    <section class="blog-hero">
+      <div class="blog-hero-container">
+        <!-- Ícono de Lentes (SVG a medida) -->
+        <div class="blog-icon">
+          <svg
+            viewBox="0 0 100 40"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <!-- Lente izquierdo -->
+            <circle cx="30" cy="20" r="14" />
+            <!-- Lente derecho -->
+            <circle cx="70" cy="20" r="14" />
+            <!-- Puente -->
+            <path d="M 44 18 Q 50 8 56 18" />
+            <!-- Patillas laterales -->
+            <line x1="16" y1="20" x2="6" y2="20" />
+            <line x1="84" y1="20" x2="94" y2="20" />
+          </svg>
+        </div>
+
+        <!-- Título -->
+        <h1 class="titulo blog-hero-title">
+          Nuestro blog, tu <span class="highlight">recurso</span> para
+          decisiones financieras y legales informadas
+        </h1>
+
+        <!-- Párrafo descriptivo -->
+        <p class="blog-hero-text">
+          Accede a artículos prácticos sobre inversiones, impuestos,
+          planificación empresarial y protección legal. Cada semana publicamos
+          contenido que te ayuda a entender mejor tus opciones antes de
+          consultar con nuestros expertos.
+        </p>
+      </div>
+    </section>
+
+    <!-- GRILLA DE ARTÍCULOS DEL BLOG -->
+    <section class="blog-grid-section">
+      <div class="blog-grid-container">
+        <!-- FILA 1 -->
+        <!-- Tarjeta 1: Finanzas -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Finanzas</span>
+          <h3 class="titulo blog-card-title">
+            Guía Completa de inversiones 2024
+          </h3>
+          <p class="blog-card-excerpt">
+            Descubre las mejores estrategias de inversión para maximizar tu
+            patrimonio este año.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>28 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 2: Derecho -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Derecho</span>
+          <h3 class="titulo blog-card-title">
+            Cambios en la Legislación Societaria
+          </h3>
+          <p class="blog-card-excerpt">
+            Análisis de las últimas reformas en derecho corporativo y cómo
+            afectan a tu empresa.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>18 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 3: Contabilidad -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Contabilidad</span>
+          <h3 class="titulo blog-card-title">
+            Optimización Fiscal para Empresas
+          </h3>
+          <p class="blog-card-excerpt">
+            Estrategias legales para optimizar la carga tributaria de tu
+            negocio.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>5 feb 2026</span>
+          </div>
+        </a>
+
+        <!-- FILA 2 -->
+        <!-- Tarjeta 4: Finanzas -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Finanzas</span>
+          <h3 class="titulo blog-card-title">
+            Guía Completa de inversiones 2024
+          </h3>
+          <p class="blog-card-excerpt">
+            Descubre las mejores estrategias de inversión para maximizar tu
+            patrimonio este año.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>28 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 5: Derecho -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Derecho</span>
+          <h3 class="titulo blog-card-title">
+            Cambios en la Legislación Societaria
+          </h3>
+          <p class="blog-card-excerpt">
+            Análisis de las últimas reformas en derecho corporativo y cómo
+            afectan a tu empresa.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>18 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 6: Contabilidad -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Contabilidad</span>
+          <h3 class="titulo blog-card-title">
+            Optimización Fiscal para Empresas
+          </h3>
+          <p class="blog-card-excerpt">
+            Estrategias legales para optimizar la carga tributaria de tu
+            negocio.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>5 feb 2026</span>
+          </div>
+        </a>
+
+        <!-- FILA 3 -->
+        <!-- Tarjeta 7: Finanzas -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Finanzas</span>
+          <h3 class="titulo blog-card-title">
+            Guía Completa de inversiones 2024
+          </h3>
+          <p class="blog-card-excerpt">
+            Descubre las mejores estrategias de inversión para maximizar tu
+            patrimonio este año.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>28 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 8: Derecho -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Derecho</span>
+          <h3 class="titulo blog-card-title">
+            Cambios en la Legislación Societaria
+          </h3>
+          <p class="blog-card-excerpt">
+            Análisis de las últimas reformas en derecho corporativo y cómo
+            afectan a tu empresa.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>18 abr 2026</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 9: Contabilidad -->
+        <a href="single.html" class="blog-card">
+          <span class="blog-badge">Contabilidad</span>
+          <h3 class="titulo blog-card-title">
+            Optimización Fiscal para Empresas
+          </h3>
+          <p class="blog-card-excerpt">
+            Estrategias legales para optimizar la carga tributaria de tu
+            negocio.
+          </p>
+          <div class="blog-card-meta">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>5 feb 2026</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- PAGINACIÓN -->
+      <div class="blog-pagination">
+        <!-- El botón anterior tiene un estilo apagado por defecto (página 1) -->
+        <button class="btn-pagination btn-prev" disabled>Anterior</button>
+        <button class="btn-pagination btn-next">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer-section">
+      <div class="footer-container">
+        <!-- Parte Superior del Footer: Logo e Información de Contacto -->
+        <div class="footer-top">
+          <!-- Sección del Logo (Reutilizando estructura del header) -->
+          <div class="logo-container">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+              <h1>INVEX<br />CAPITAL</h1>
+            </div>
+            <div class="logo-divider"></div>
+            <div class="logo-subtitle">
+              Servicios<br />financieros<br />contables y<br />legales
+            </div>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span>info@invexcapitalec.com</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                />
+              </svg>
+              <span>(+593) 99 971 6118</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+              <span>Av. Ordoñes Lasso, Cuenca, EC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte Inferior del Footer: Derechos y Enlaces Legales -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2026 INVEX CAPITAL. Todos los derechos reservados. | Diseñado por
+            Andre Murillo Alvarado
+          </div>
+          <div class="legal-links">
+            <a href="#politica-privacidad">Política de Privacidad</a>
+            <a href="#terminos-servicio">Términos de Servicio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

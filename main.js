@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       badge: "Derecho Societario",
       name: "Abg. Fernando Murillo",
       role: "COO - Especialista en Derecho Societario",
-      cost: "25",
+      cost: "20",
       bullets: [
         "Constitución de empresas",
         "Trámite Visas USA",

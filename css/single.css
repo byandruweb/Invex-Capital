@@ -1,0 +1,124 @@
+/* --- SECCIÓN PRINCIPAL DEL ARTÍCULO --- */
+.single-article-section {
+  padding: 4rem 2rem 8rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.single-article-container {
+  background-color: var(--bg-card); /* Azul grisáceo en modo noche */
+  max-width: 1200px;
+  width: 100%;
+  padding: 5rem 6rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+[data-theme="light"] .single-article-container {
+  background-color: #ffffff; /* Blanco puro en modo día */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); /* Sombra más suave en modo día */
+}
+
+/* --- TÍTULO --- */
+.article-title {
+  font-size: 3.5rem;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--text-color);
+  margin: 0 0 4rem 0;
+}
+
+[data-theme="light"] .article-title {
+  color: var(--primario); /* Fuerza el azul oscuro en modo día */
+}
+
+/* --- METADATOS (FECHA Y CATEGORÍA) --- */
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.article-date {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--secundario); /* Dorado constante */
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Etiqueta de Categoría */
+.article-category-badge {
+  background-color: #4a6b8c; /* Azul pizarra para modo noche */
+  color: #0d1b2a; /* Texto oscuro para contraste */
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="light"] .article-category-badge {
+  background-color: #eedcba; /* Dorado claro para modo día */
+  color: #a67c00;
+}
+
+/* --- CONTENIDO DE TEXTO --- */
+.article-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  opacity: 0.85; /* Ligera transparencia para lectura cómoda */
+  margin-bottom: 2rem;
+}
+
+[data-theme="light"] .article-content p {
+  color: var(--primario);
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE PARA EL SINGLE --- */
+@media (max-width: 992px) {
+  .single-article-container {
+    padding: 4rem 3rem;
+  }
+
+  .article-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-article-section {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .single-article-container {
+    padding: 3rem 2rem;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .article-content p {
+    font-size: 1.05rem;
+  }
+}

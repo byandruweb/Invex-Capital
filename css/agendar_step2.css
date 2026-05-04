@@ -6,6 +6,11 @@
   align-items: start;
 }
 
+.assigned-prof-card .prof-avatar {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
 /* --- ESTILOS DE FORMULARIO --- */
 .input-group {
   display: flex;
@@ -39,6 +44,28 @@
 
 .pill-input:focus {
   border-color: var(--secundario);
+}
+
+/* Estilo para las opciones del desplegable */
+.country-select option,
+.custom-select option {
+  /* Forzamos un color de fondo sólido según el tema */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px;
+}
+
+/* Opcional: Si el fondo sigue viéndose blanco en algunos navegadores */
+[data-theme="light"] .country-select option,
+[data-theme="light"] .custom-select option {
+  background-color: #ffffff; /* Fondo sólido para modo claro */
+  color: #0d1b2a; /* Texto oscuro */
+}
+
+[data-theme="dark"] .country-select option,
+[data-theme="dark"] .custom-select option {
+  background-color: #0d1b2a; /* Fondo oscuro para modo noche */
+  color: #ffffff;
 }
 
 /* Textarea (Bordes ligeramente redondeados) */

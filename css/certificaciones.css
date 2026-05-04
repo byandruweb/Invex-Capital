@@ -76,6 +76,17 @@
     box-shadow 0.3s ease;
 }
 
+.testimonial-card .testimonial-author svg {
+  width: 70px;
+  height: 70px;
+  color: var(--text-color);
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .testimonial-card .testimonial-author svg {
+  color: var(--secundario); /* Íconos dorados en modo claro según tu diseño */
+}
+
 .quote-icon {
   color: var(--secundario); /* Comillas doradas */
   margin-bottom: 1rem;

@@ -1,0 +1,247 @@
+/* --- CABECERA DEL BLOG --- */
+.blog-hero {
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(
+    --bg-color
+  ); /* Hereda el fondo general (oscuro/claro) */
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.blog-hero-container {
+  max-width: 1200px; /* Controla el ancho máximo para que el texto no se estire demasiado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-icon {
+  color: var(--secundario); /* El ícono siempre es dorado */
+  margin-bottom: 2rem;
+}
+
+.blog-icon svg {
+  width: 500px;
+}
+
+.blog-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+}
+
+.blog-hero-title .highlight {
+  color: var(--secundario); /* "recurso" siempre dorado */
+}
+
+.blog-hero-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 850px; /* Un poco más estrecho que el título para darle forma de pirámide invertida */
+}
+
+/* --- RESPONSIVE CABECERA DEL BLOG --- */
+@media (max-width: 992px) {
+  .blog-hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .blog-icon svg {
+    width: 200px; /* Reducimos el ícono en móviles */
+    height: auto;
+  }
+
+  .blog-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-hero-text {
+    font-size: 1rem;
+  }
+}
+
+/* --- SECCIÓN GRILLA DE BLOG --- */
+.blog-grid-section {
+  padding: 2rem 3rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* --- TARJETAS --- */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card-2, #e7ebef); /* Fondo claro en modo noche */
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: var(--primario, #0e253c);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+[data-theme="light"] .blog-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+[data-theme="light"] .blog-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ETIQUETAS (BADGES) --- */
+.blog-badge {
+  align-self: flex-start;
+  background-color: #b6d0e2;
+  color: var(--primario, #0e253c);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="light"] .blog-badge {
+  background-color: #eedcba;
+  color: #a67c00;
+}
+
+/* --- TEXTOS DE LA TARJETA --- */
+.blog-card-title {
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+  color: var(--primario, #0e253c);
+}
+
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* --- PAGINACIÓN --- */
+.blog-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  padding-top: 2.5rem;
+}
+
+.btn-pagination {
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Botón Anterior (Estilo Inactivo/Apagado según imagen) */
+.btn-prev {
+  background-color: #2c3a47; /* Gris azulado oscuro para el modo noche */
+  color: var(
+    --primario,
+    #0e253c
+  ); /* Letras oscuras en fondo oscuro (efecto disable) */
+  cursor: not-allowed;
+}
+
+[data-theme="light"] .btn-prev {
+  background-color: #f2e8d5; /* Beige muy claro para modo día */
+  color: #ffffff; /* Letras blancas para simular inactividad */
+}
+
+/* Botón Siguiente (Estilo Activo) */
+.btn-next {
+  background-color: var(--secundario, #d4a84b);
+  color: var(--primario, #0e253c);
+}
+
+[data-theme="light"] .btn-next {
+  color: #ffffff; /* Letras blancas en el botón dorado para modo claro */
+}
+
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(212, 168, 75, 0.3);
+}
+
+[data-theme="light"] .btn-next:hover {
+  color: var(--text-color);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .blog-grid-container {
+    gap: 1.5rem;
+  }
+  .blog-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Pasa a 2 columnas */
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid-section {
+    padding: 2rem 1.5rem 4rem;
+  }
+  .blog-grid-container {
+    grid-template-columns: 1fr; /* Pasa a 1 columna en móvil */
+  }
+  .blog-pagination {
+    flex-direction: column; /* Apila los botones en móvil */
+    gap: 1rem;
+  }
+  .btn-pagination {
+    width: 100%; /* Botones a todo el ancho en móvil */
+  }
+}
